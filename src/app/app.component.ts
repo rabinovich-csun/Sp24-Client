@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from "./home/home.component";
 import { HttpClientModule } from '@angular/common/http';
+import { NavMenuComponent } from "./nav-menu/nav-menu.component";
 
 @Component({
     selector: 'app-root',
@@ -10,10 +11,11 @@ import { HttpClientModule } from '@angular/common/http';
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
     imports: [
-      CommonModule, 
-      RouterOutlet, 
-      HomeComponent, 
-      HttpClientModule
+        CommonModule,
+        RouterOutlet,
+        HomeComponent,
+        HttpClientModule,
+        NavMenuComponent
     ]
 })
 export class AppComponent {
