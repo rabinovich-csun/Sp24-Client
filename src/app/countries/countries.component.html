@@ -1,1 +1,26 @@
-<p>countries works!</p>
+<h1>Countries</h1>
+<p>Here's a list of countries: feel free to play with it.</p>
+@if (countries) {
+  <table class='table table-striped' aria-labelledby="tableLabel">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>ISO2</th>
+        <th>ISO3</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (country of countries; track country.id) {
+        <tr ngFor="let country of countries">
+          <td>{{ country.id }}</td>
+          <td>{{ country.name }}</td>
+          <td>{{ country.iso2 }}</td>
+          <td>{{ country.iso3 }}</td>
+        </tr>  
+      }
+    </tbody>
+  </table>
+} @else {
+  <p><em>Loading...</em></p>
+}

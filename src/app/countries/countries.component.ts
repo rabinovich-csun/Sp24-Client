@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { environment } from '../../environments/environment.development';
+import { HttpClient } from '@angular/common/http';
+import { Country } from './country';
 
 @Component({
   selector: 'app-countries',
@@ -7,6 +10,22 @@ import { Component } from '@angular/core';
   templateUrl: './countries.component.html',
   styleUrl: './countries.component.css'
 })
-export class CountriesComponent {
+export class CountriesComponent implements OnInit {
+  public countries!: Country[];
+
+  constructor(private http: HttpClient) {  }
+  ngOnInit(): void {
+    this.getData()
+  }
+
+  getData() {
+    var url = environment.baseUrl + 'api/Countries';
+    this.http.get<Country[]>(url)
+    .subscribe({
+      next: result => this.countries = result,
+      error: e => console.error(e)
+    })
+  }
+
 
 }
