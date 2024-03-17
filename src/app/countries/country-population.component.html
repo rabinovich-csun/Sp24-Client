@@ -1,1 +1,11 @@
-<p>country-population works!</p>
+<h3>Country Population</h3>
+
+@if (countryPopulation) {
+    <strong>{{countryPopulation.name}} - {{countryPopulation.population}}</strong>    
+}
+
+<div>
+    <a mat-flat-button color="secondary"
+        [routerLink]="['/countries']" routerLinkActive="router-link-active">Back</a>
+
+</div>
