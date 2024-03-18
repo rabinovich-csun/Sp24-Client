@@ -10,8 +10,7 @@ import { MatTableModule } from '@angular/material/table';
   imports: [
     MatTableModule
   ],
-  templateUrl: './cities.component.html',
-  styleUrl: './cities.component.scss'
+  templateUrl: './cities.component.html'
 })
 export class CitiesComponent implements OnInit {
   public displayedColumns: string[] = ['id', 'name', 'lat', 'lon', 'country'];
