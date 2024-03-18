@@ -1,0 +1,35 @@
+<h1>Cities</h1>
+<p>Here's a list of cities: feel free to play with it.</p>
+@if (cities) {
+    <table mat-table [dataSource]="cities" 
+    class="mat-elevation-z8">
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>ID</th>
+      <td mat-cell *matCellDef="let city">{{city.id}}</td>
+    </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let city">{{city.name}}</td>
+    </ng-container>
+    <!-- Lat Column -->
+    <ng-container matColumnDef="lat">
+      <th mat-header-cell *matHeaderCellDef>Latitude</th>
+      <td mat-cell *matCellDef="let city">{{city.lat}}</td>
+    </ng-container>
+    <!-- Lon Column -->
+    <ng-container matColumnDef="lon">
+      <th mat-header-cell *matHeaderCellDef>Longitude</th>
+      <td mat-cell *matCellDef="let city">{{city.lon}}</td>
+    </ng-container>
+    <ng-container matColumnDef="country">
+        <th mat-header-cell *matHeaderCellDef>Country</th>
+        <td mat-cell *matCellDef="let city">{{city.country}}</td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+} @else {
+    <p><em>Loading...</em></p>
+}
