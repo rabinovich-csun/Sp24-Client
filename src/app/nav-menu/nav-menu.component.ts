@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar' ;
 import { MatIconModule } from '@angular/material/icon' ;
+import { MatButtonModule } from '@angular/material/button' ;
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -9,6 +10,7 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
   imports: [
     MatIconModule,
     MatToolbarModule,
+    MatButtonModule,
     RouterOutlet, RouterLink, RouterLinkActive
   ],
   templateUrl: './nav-menu.component.html',
