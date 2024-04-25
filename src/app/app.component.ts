@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from "./home/home.component";
-import { HttpClientModule } from '@angular/common/http';
 import { NavMenuComponent } from "./nav-menu/nav-menu.component";
 import { AuthService } from './auth/auth.service';
 
@@ -15,7 +14,6 @@ import { AuthService } from './auth/auth.service';
         CommonModule,
         RouterOutlet,
         HomeComponent,
-        HttpClientModule,
         NavMenuComponent
     ]
 })
