@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from "./home/home.component";
 import { HttpClientModule } from '@angular/common/http';
 import { NavMenuComponent } from "./nav-menu/nav-menu.component";
+import { AuthService } from './auth/auth.service';
 
 @Component({
     selector: 'app-root',
@@ -18,6 +19,11 @@ import { NavMenuComponent } from "./nav-menu/nav-menu.component";
         NavMenuComponent
     ]
 })
-export class AppComponent {
-  title = 'AngClient';
+export class AppComponent implements OnInit {
+  title = "World Cities";
+  constructor(private authService: AuthService) {}
+
+  ngOnInit(): void {
+    this.authService.init();
+  }
 }
