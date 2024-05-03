@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -9,11 +10,10 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  baseUrl = "https://localhost:7048/";
   public forecasts: WeatherForecast[] = [];
 
   constructor(http: HttpClient) {
-    http.get<WeatherForecast[]>(this.baseUrl + 'weatherforecast').subscribe({
+    http.get<WeatherForecast[]>(`${environment.baseUrl}weatherforecast`).subscribe({
       next: result => this.forecasts = result,
       error: e => console.error(e)
     });
