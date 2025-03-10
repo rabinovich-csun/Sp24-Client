@@ -7,16 +7,15 @@ import { Subject, takeUntil } from 'rxjs';
 import { AuthService } from '../auth/auth.service';
 
 @Component({
-  selector: 'app-nav-menu',
-  standalone: true,
-  imports: [
-    MatIconModule,
-    MatToolbarModule,
-    MatButtonModule,
-    RouterOutlet, RouterLink, RouterLinkActive
-  ],
-  templateUrl: './nav-menu.component.html',
-  styleUrl: './nav-menu.component.css'
+    selector: 'app-nav-menu',
+    imports: [
+        MatIconModule,
+        MatToolbarModule,
+        MatButtonModule,
+        RouterOutlet, RouterLink, RouterLinkActive
+    ],
+    templateUrl: './nav-menu.component.html',
+    styleUrl: './nav-menu.component.css'
 })
 export class NavMenuComponent implements OnInit, OnDestroy {
   private destroySubject = new Subject();

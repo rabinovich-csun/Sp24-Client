@@ -5,10 +5,9 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 
 @Component({
-  selector: 'app-country-population',
-  standalone: true,
-  imports: [RouterLink],
-  templateUrl: './country-population.component.html'
+    selector: 'app-country-population',
+    imports: [RouterLink],
+    templateUrl: './country-population.component.html'
 })
 export class CountryPopulationComponent implements OnInit {
   id:number;

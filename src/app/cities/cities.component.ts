@@ -5,12 +5,11 @@ import { City } from './city';
 import { MatTableModule } from '@angular/material/table';
 
 @Component({
-  selector: 'app-cities',
-  standalone: true,
-  imports: [
-    MatTableModule
-  ],
-  templateUrl: './cities.component.html'
+    selector: 'app-cities',
+    imports: [
+        MatTableModule
+    ],
+    templateUrl: './cities.component.html'
 })
 export class CitiesComponent implements OnInit {
   public displayedColumns: string[] = ['id', 'name', 'lat', 'lon', 'country'];
