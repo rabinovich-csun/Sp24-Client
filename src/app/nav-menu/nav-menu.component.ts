@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar' ;
 import { MatIconModule } from '@angular/material/icon' ;
 import { MatButtonModule } from '@angular/material/button' ;
-import { RouterOutlet, RouterLink, RouterLinkActive, Router } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { AuthService } from '../auth/auth.service';
 
@@ -12,7 +12,7 @@ import { AuthService } from '../auth/auth.service';
         MatIconModule,
         MatToolbarModule,
         MatButtonModule,
-        RouterOutlet, RouterLink, RouterLinkActive
+        RouterLink
     ],
     templateUrl: './nav-menu.component.html',
     styleUrl: './nav-menu.component.css'
