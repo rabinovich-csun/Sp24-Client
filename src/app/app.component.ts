@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterOutlet } from '@angular/router';
 import { NavMenuComponent } from "./nav-menu/nav-menu.component";
 import { AuthService } from './auth/auth.service';
@@ -9,10 +9,9 @@ import { AuthService } from './auth/auth.service';
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
     imports: [
-        CommonModule,
-        RouterOutlet,
-        NavMenuComponent
-    ]
+    RouterOutlet,
+    NavMenuComponent
+]
 })
 export class AppComponent implements OnInit {
   title = "World Cities";
