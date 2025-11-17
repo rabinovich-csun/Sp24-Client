@@ -12,14 +12,12 @@
     </thead>
     <tbody>
       @for (country of countries; track country.id) {
-        @for ( of ; track ) {
           <tr>
             <td><a [routerLink]="['/countrypopulation', country.id]"> {{ country.id }}</a></td>
             <td>{{ country.name }}</td>
             <td>{{ country.iso2 }}</td>
             <td>{{ country.iso3 }}</td>
           </tr>
-        }
       }
     </tbody>
   </table>
